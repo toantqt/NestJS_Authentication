@@ -186,13 +186,13 @@ export class AuthService implements IAuthService {
       hash,
     });
 
-    // await this.mailsService.confirmRegisterUser({
-    //   to: registerDto.email,
-    //   data: {
-    //     hash,
-    //     user: registerDto.firstName,
-    //   },
-    // });
+    await this.mailsService.confirmRegisterUser({
+      to: registerDto.email,
+      data: {
+        hash,
+        user: registerDto.firstName,
+      },
+    });
   }
 
   async status(userJwtPayload: JwtPayloadType): Promise<NullableType<User>> {

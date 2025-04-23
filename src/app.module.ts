@@ -20,8 +20,7 @@ import googleConfig from './config/google.config';
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      // load: [databaseConfig, appConfig, authConfig, mailerConfig, googleConfig],
-      load: [databaseConfig, appConfig, authConfig, mailerConfig],
+      load: [databaseConfig, appConfig, authConfig, mailerConfig, googleConfig],
       envFilePath: ['.env'],
     }),
     TypeOrmModule.forRootAsync({
@@ -37,7 +36,7 @@ import googleConfig from './config/google.config';
     MailerModule,
     MailsModule,
     ForgotPasswordModule,
-    // AuthGoogleModule,
+    AuthGoogleModule,
   ],
 })
 export class AppModule {}

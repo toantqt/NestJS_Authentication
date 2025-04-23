@@ -43,10 +43,16 @@ export type GoogleConfig = {
   clientSecret?: string;
 };
 
+export type FacebookConfig = {
+  clientId?: string;
+  clientSecret?: string;
+};
+
 export type AllConfigType = {
   app: AppConfig;
   database: DatabaseConfig;
   auth: AuthConfig;
   mailer: MailerConfig;
   google: GoogleConfig;
+  facebook: FacebookConfig;
 };
